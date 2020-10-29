@@ -1,0 +1,76 @@
+%  Created by James P. Cross on 3/9/2015.
+%  Copyright (c). Some rights reserved.
+
+% This work is licensed under the Creative Commons Attribution 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+
+% Setup for fullpage use
+%\usepackage{fullpage}
+
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+\geometry{margin=1in} % for example, change the margins to 2 inches all round
+
+\usepackage[bf]{caption}
+
+\usepackage{dcolumn} % For centering table entries on dots.
+
+\usepackage{verbatim} % for multi-line comments excluded from the pdfs.
+
+% This is now the recommended way for checking for PDFLaTeX:
+\usepackage{ifpdf}
+ 
+% for interline spacing
+\usepackage{setspace}   
+
+% interline spacing of 2.0 in main text, 1 in footnotes 
+%\doublespacing  
+\singlespacing  
+
+\ifpdf
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+\usepackage[colorinlistoftodos]{todonotes}
+
+\usepackage{hyperref}
+\usepackage{breakurl}
+
+\title{POL30350 - Politics and Policy making in the EU}
+\author{Dr. James P. Cross \& Dr. Deirdre Tinney}
+\date{\parbox{\linewidth}{\centering%
+  Autumn 2017\endgraf\bigskip\bigskip\bigskip
+  School of Politics and International Relations (SPIRe) \endgraf\medskip
+  University College Dublin}}
+
+\begin{document}
+\ifpdf
+\DeclareGraphicsExtensions{.pdf, .jpg, .tif}
+\else
+\DeclareGraphicsExtensions{.eps, .jpg}
+\fi
+\maketitle
+
+
+\thispagestyle{empty}
+\clearpage
+
+
+%Module component files
+%-------------------------------------------------------------
+\input{Introduction.tex}
+\input{Learning_outcomes.tex}
+\input{Assessment_strategy.tex}
+\input{Style_requirement.tex}
+\input{Grade_explanation.tex}
+\input{Readings.tex}
+%-------------------------------------------------------------
+
+\end{document}

@@ -1,0 +1,93 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+
+
+% Setup for fullpage use
+%\usepackage{fullpage}
+
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+\geometry{margin=1in} % for example, change the margins to 2 inches all round
+
+%Citations
+%\usepackage{natbib}
+%\setlength{\bibsep}{0pt plus 0.3ex}
+%\usepackage{bibentry}
+%\newcommand{\bibverse}[1]{\begin{verse} \bibentry{#1}. \end{verse}}
+
+\usepackage[bf]{caption}
+
+\usepackage{dcolumn} % For centering table entries on dots.
+
+% Uncomment some of the following if you use the features
+%
+% Running Headers and footers
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+
+% Multipart figures
+%\usepackage{subfigure}
+
+%Text boxes
+\usepackage[linewidth=1pt]{mdframed}
+\usepackage{lipsum}
+
+% Multi col tables
+\usepackage{multicol}
+
+\usepackage{verbatim} % for multi-line comments excluded from the pdfs.
+
+% This is now the recommended way for checking for PDFLaTeX:
+\usepackage{ifpdf}
+ 
+% for interline spacing
+\usepackage{setspace}   
+
+% interline spacing of 2.0 in main text, 1 in footnotes 
+%\doublespacing  
+\singlespacing  
+
+\ifpdf
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{hyperref}
+\usepackage{breakurl}
+
+\title{INRL20160: The Politics of the EU 
+2019-2020}
+
+
+\date{12 weeks - 24 hours of lectures}
+\author{Dr. James P. Cross}
+
+\begin{document}
+\ifpdf
+\DeclareGraphicsExtensions{.pdf, .jpg, .tif}
+\else
+\DeclareGraphicsExtensions{.eps, .jpg}
+\fi
+\maketitle
+
+%\nobibliography*
+
+\thispagestyle{empty}
+\clearpage
+
+\input{introduction}
+%\input{contact_details}
+\input{learning_outcomes}
+\input{assessment}
+\input{grade_explanation}
+\input{readings}
+
+\bibliographystyle{plain}
+%\nobibliography{BibLib}
+
+\end{document}

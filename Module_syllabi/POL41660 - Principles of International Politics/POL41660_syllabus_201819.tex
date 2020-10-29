@@ -1,0 +1,963 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+
+% Setup for fullpage use
+%\usepackage{fullpage}
+
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+\geometry{margin=1in} % for example, change the margins to 2 inches all round
+
+%Citations
+%\usepackage{natbib}
+%\setlength{\bibsep}{0pt plus 0.3ex}
+%\usepackage{bibentry}
+
+\usepackage[bf]{caption}
+
+\usepackage{dcolumn} % For centering table entries on dots.
+
+% Uncomment some of the following if you use the features
+%
+% Running Headers and footers
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+
+% Multipart figures
+%\usepackage{subfigure}
+
+%Urls
+\usepackage{hyperref}
+
+%Text boxes
+\usepackage[linewidth=1pt]{mdframed}
+\usepackage{lipsum}
+
+% Multi col tables
+\usepackage{multicol}
+
+\usepackage{verbatim} % for multi-line comments excluded from the pdfs.
+
+% This is now the recommended way for checking for PDFLaTeX:
+\usepackage{ifpdf}
+ 
+% for interline spacing
+\usepackage{setspace}   
+
+% interline spacing of 2.0 in main text, 1 in footnotes 
+%\doublespacing  
+\singlespacing  
+
+\ifpdf
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+\usepackage[colorinlistoftodos]{todonotes}
+
+\usepackage{hyperref}
+\usepackage{breakurl}
+
+\title{POL41660 - Principles of International Politics}
+
+
+\date{}
+\author{Dr. James P. Cross}
+
+\begin{document}
+\ifpdf
+\DeclareGraphicsExtensions{.pdf, .jpg, .tif}
+\else
+\DeclareGraphicsExtensions{.eps, .jpg}
+\fi
+\maketitle
+
+%\nobibliography*
+
+\thispagestyle{empty}
+\clearpage
+
+\section*{Introduction}
+
+This module aims to explore topics in international politics from a rationalist perspective using game theory and formal modelling to provide insight into the strategic choices faced by actors in different international political settings. Fundamental to this undertaking is understanding the strategic incentives faced by actors in different situations through the use of formal models and game theory. We will first set out a rationalist framework in which political leaders are motivated to fulfil their preferences for power and policy, but face strategic challenges and trade offs in doing so. Once the basic set of concepts and tools making up a rationalist perspective on international politics has been outlined, we will then apply this framework to a multitude of topics in international politics, including the causes and consequences of war and peace, the role of international organisations, the determinants of international negotiations, and the interplay between domestic and international concerns for political actors situated in both realms.
+
+\section*{Course structure}
+
+The module follows the seminar format. This means that the class requires you to read a considerable amount of material, think about what you have read, and regularly talk about your understanding of the readings. A peer-review exercise will help students develop the drafts of their research papers, and a final research paper project will constitute the end of module assessment. More details on assessment requirements are provided below.
+
+\section*{Learning outcomes}
+
+At the end of this module students will be able to:
+
+\begin{itemize}
+	\item Examine international politics using the tools offered by game theory and formal modelling. 
+	\item Think about the strategic interactions between actors in international politics in a formalised way using mathematical models and constructs.
+	\item Construct their own basic game-theoretic models relating to international politics
+	\item Critique existing international politics literature 
+\end{itemize}
+
+\section*{Prior learning}
+
+While there are no specific prior requirements for this module, students should have an interest in applying mathematical concepts to the study of politics. The module does not assume any prior knowledge of game theory or formal models, but some basic knowledge of algebra, probability and calculus will certainly help students to get to grips with the material covered.
+
+\section*{Course assessment}
+
+\subsection*{Course grading scheme}
+
+\begin{itemize}
+	\item Attendance \& participation: 15\% (each unexcused absence = -1\%) 
+	\item Peer-review work: 25\%
+	\item Final research paper: 60\%
+\end{itemize}
+
+\subsection*{In-class participation and reading}
+
+This module will require both extensive (and attentive) reading and regular in-class participation. As a consequence, all students are required to attend all lectures/seminars unless prior notification and a certified excuse is presented to one of the course lecturers. Students also need to demonstrate that they have completed the readings and have thought about the issues involved. The success of the course depends on the commitment of its students. As such, full attendance and participation will form 15\% of the final grade.
+
+\subsection*{Peer review}
+
+%http://teachingcenter.wustl.edu/strategies/Pages/peer-review.aspx
+%http://teachingcenter.wustl.edu/strategies/Pages/peer-review-how-to.aspx
+
+The peer-review process is central to publishing work in academia. Part of your assessment for this module will therefore involve peer reviewing one another's work. Students will be required to submit a first draft of their research paper on \textbf{23/3/2018}. The class will then be randomly divided into small writing groups, with the draft essays distributed to all members of the group. Each student is required to write a review of each paper in their group. These reviews are then distributed among the group and will be graded by the lecturer. The advantage of this approach is that students can use these reviews to improve their work when redrafting their final research paper for submission. A full set of peer-review guidelines will be distributed before this exercise, and a peer-review workshop will prepare students for the task. Through this process you will:
+
+\begin{itemize}
+	\item Learn how to carefully read a piece of writing, with attention to the details of the piece in terms of structure and content (whether the piece is your own or another writer's);
+	\item Learn how to strengthen your writing by taking into account the responses of actual and anticipated readers;
+	\item Make the transition from writing primarily for yourselves or for an instructor to writing for a broader audience
+	\item Learn how to formulate and communicate constructive feedback on a peer's work;
+	\item Learn how to gather and respond to feedback on your own work.
+\end{itemize}
+
+\subsection*{Research paper}
+
+Students will submit a single well developed research paper on a topic relevant to International Relations. This paper should be no longer than 5,000 words and should analyse an issue of importance relating to international politics that merits academic research. The analysis should be original and should include an evaluation of approaches to understanding, resolving or further investigating the question. This paper is not a literature review and marks will be awarded for applying original ideas or approaches to established thoughts on the issue. The lecturer will provide plenty of advice and help in choosing a topic and an appropriate research methodology. It is important that students begin to think about the topic they wish to write about immediately, as this is not a trivial undertaking. Identifying a good research question from the start will save much work down the line. The deadline for the first draft of the research paper for peer review is \textbf{23/3/2018}. It is \textbf{essential} that a first draft is submitted for this date so that you can receive peer reviews from your peers. The deadline for the final paper is \textbf{6/5/2017}. The research paper will be submitted through SafeAssign.
+
+\subsection{Suggested structure}
+
+You should aim to have the following sections in your assignment:
+
+\begin{enumerate}
+	\item Introduction
+	\begin{itemize}
+		\item What is your research question and why is it important?
+		\item What outcome(s) are you trying to explain? 
+		\item Try to focus in on a question that can be answered within the word limit. Many students make the mistake of trying to answer very broad and unfocused questions. Think about how your question can be narrowed down in focus if you think it is too broad.
+		\item What case(s) and data will you use to answer your research question? Why is game theory suited for the case(s)
+		\item This section should be short and sweet (1-2 pages maximum)
+	\end{itemize}
+	\item Literature review
+	\begin{itemize}
+		\item What is the current state of the art in the literature relating to your research question?
+		\item What gap in the literature exists that your research is going to fill?
+		\item You need to be careful to only include relevant literature so that you do not spend too much time talking about other peoples' research. We are interested in your original contribution, not what has been done before. You have to use this section to place your research and yourself in the current debate.
+	\end{itemize}
+	\item Case description and spatial model
+	\begin{itemize}
+		\item Provide background information and details about your chosen case(s)
+		\item Can the case(s) usefully be described using a spatial model (ideally it should!)
+		\item What are the issue(s) over which there is conflict?
+		\item Who are the actors involved?
+		\item What are the actors positions on the issue(s)?
+		\item What power does each actor bring to the table?
+		\item Other relevant elements of the spatial model?
+	\end{itemize}
+	\item Game theory models
+	\begin{itemize}
+		\item Describe and explain the game theoretic model you want to use to explore the conflict you are interested in analysing
+		\item It can be normal form or extensive form in nature
+		\item Solve the game using a Nash equilibrium or sub-game perfect Nash equilibrium approach
+		\item Use the same model to explore how the outcome might change if one of the variables in the model changes (maybe one actor’s relative power changes? Maybe the cost of conflict changes?)
+	\end{itemize}
+	\item Discussion/conclusions
+	\begin{itemize}
+		\item Restate the research question and explain how you have answered it based on the findings presented
+		\item Do not introduce new explanations or factors relating to your research question here. Talk about the results described in the previous section.
+		\item Here you also draw out the implications of your findings for both the existing literature and for the research question/problem you have studied
+	\end{itemize}
+	\item Bibliography
+	\begin{itemize}
+		\item Use a consistent style (Harvard recommended)
+	\end{itemize}
+\end{enumerate}
+
+\subsection*{Important dates}
+
+\begin{itemize}
+	\item 23 March 2017: First draft of research paper due
+	\item 26 March 2017: Peer-review workshop
+	\item 8 April 2017: Peer-review worksheets due
+	\item 6 May 2017: Final research paper due
+\end{itemize}
+
+\subsection*{Grading Criteria}
+
+In essence, markers assess four crucial elements in any answer:
+
+\begin{itemize}
+  \item Analysis/understanding
+  \item Extent and use of reading
+  \item Organisation/structure
+  \item Writing proficiency
+\end{itemize}
+
+The various grades/classifications reflect the extent to which an answer displays essential features of each of these elements (and their relative weighting). At its simplest: the better the analysis, the wider the range of appropriate sources consulted, the greater the understanding of the materials read, the clearer the writing style, and the more structured the argument, the higher will be the mark. 
+
+The following provides an indicative outline of the criteria used by markers to award a particular grade/classification. If you are in any confusion about how to correctly approach referencing and bibliography issues, there are many good guides available online (Here for instance: \url{http://www.ucd.ie/t4cms/Guide69.pdf}). Proper referencing is ESSENTIAL in a good assignment.
+
+\subsection*{Grade explanation}
+
+\subsubsection*{Grade: A}
+
+\textit{Excellent Performance}
+
+A deep and systematic engagement with the assessment task, with consistently impressive demonstration of a comprehensive mastery of the subject matter, reflecting:
+
+\begin{itemize}
+	\item A deep and broad knowledge and critical insight as well as extensive reading;
+	\item A critical and comprehensive appreciation
+	of the relevant literature or theoretical, technical or professional framework
+	\item An exceptional ability to organise, analyse and present arguments fluently and lucidly with a high level of critical analysis, amply supported by evidence, citation or quotation;
+	\item A highly-developed capacity for original,
+	creative and logical thinking
+	\item An extensive and detailed knowledge of the subject matter
+	\item A highly-developed ability to apply this knowledge to the task set
+	\item Evidence of extensive background reading
+	\item Clear, fluent, stimulating and original expression
+	\item Excellent presentation (spelling, grammar, graphical) with minimal or no presentation errors
+	\item Referencing style consistently executed in recognised style
+\end{itemize}
+
+%\begin{itemize}
+%	\item Analysis: Reveals a detailed understanding of the arguments and perspectives to be found in the appropriate literature and applies these consistently and unambiguously to answering a specific question or make a specific point. Assesses the respective strengths and weaknesses of a variety of sources and reaches reasoned conclusions as to the respective merits of the academic perspectives and/or data consulted. Will be willing to construct an original argument through subjecting existing sources to critical appraisal and, exceptionally and outstandingly, to extend the analysis beyond the existing boundaries of discussion.
+
+%	\item Extent and Use of Reading: Comprehensive in coverage, extending beyond the ‘essential’ and ‘recommended’ references on the course reading lists. Where appropriate will make full use of contemporary primary sources/ data. Consistent, thorough and extensive referencing will be apparent.
+
+%	\item Organisation/Structure: There will be a logical progression of the discussion, with the main themes clearly identified at the outset and then threaded through the following discussion. The author’s conclusions/assessments will be forcefully and cogently presented.
+
+%	\item Writing Proficiency: Will be written in a lucid, grammatically correct and free-flowing style.
+%\end{itemize}
+
+\subsubsection*{Grade: B}
+
+\textit{Very Good Performance}
+
+A thorough and well organised response to the assessment task, demonstrating:
+
+\begin{itemize}
+	\item A thorough familiarity with the relevant literature or theoretical, technical or professional framework
+	\item Well-developed capacity to analyse issues, organise material, present arguments clearly and cogently well supported by evidence, citation or quotation;
+	\item Some original insights and capacity for creative and logical thinking
+	\item A broad knowledge of the subject matter
+	\item Considerable strength in applying that knowledge to the task set
+	\item Evidence of substantial background reading
+	\item Clear and fluent expression
+	\item Quality presentation with few presentation errors
+	\item Referencing style for the most part consistently executed in recognised style
+\end{itemize}
+
+\subsubsection*{Grade: C}
+
+\textit{Good Performance}
+
+An intellectually competent and factually sound answer with, marked by:
+
+\begin{itemize}
+	\item Evidence of a reasonable familiarity with the relevant literature or theoretical, technical or professional framework
+	\item Good developed arguments, but more statements of ideas
+	\item Arguments or statements adequately but not well supported by evidence, citation or quotation
+	\item Some critical awareness and analytical qualities
+	\item Some evidence of capacity for original and logical thinking
+	\item Adequate but not complete
+	knowledge of the subject matter
+	\item Omission of some important subject matter or the appearance of several minor errors
+	\item Capacity to apply knowledge appropriately to the task albeit with some errors
+	\item Evidence of some background reading
+	\item Clear expression with few areas of confusion
+	\item Writing of sufficient quality to convey meaning but some lack of fluency and command of suitable vocabulary
+	\item Good presentation with some presentation errors
+	\item Referencing style executed in recognised style, but with some errors
+\end{itemize}
+
+\subsubsection*{Grade: D}
+
+\textit{Satisfactory Performance}
+
+An acceptable level of intellectual engagement with the assessment task showing:
+
+\begin{itemize}
+	\item Some familiarity with the relevant literature or theoretical, technical or professional framework
+	\item Mostly statements of ideas, with limited development of argument
+	\item Limited use of evidence, citation or quotation
+	\item Limited critical awareness displayed
+	\item Limited evidence of capacity for original and logical thinking
+	\item Basic grasp of subject matter, but somewhat lacking in focus and structure
+	\item Main points covered but insufficient detail
+	\item Some effort to apply knowledge to the task but only a basic capacity or understanding displayed
+	\item Little or no evidence of background reading
+	\item Several minor errors or one major error
+	\item Satisfactory presentation with an acceptable level of presentation errors
+	\item Referencing style inconsistent
+\end{itemize}
+
+\subsubsection*{Grade: D-}
+
+\textit{Acceptable}
+
+The minimum acceptable of intellectual engagement with the assessment task which:
+
+\begin{itemize}
+	\item The minimum acceptable appreciation of the relevant literature or theoretical, technical or professional framework
+	\item Ideas largely expressed as statements, with little or no developed or structured argument
+	\item Minimum acceptable use of evidence, citation or quotation
+	\item Little or no analysis or critical awareness displayed or is only partially successful
+	\item Little or no demonstrated capacity for original and logical thinking
+	\item Shows a basic grasp of subject matter but may be poorly focussed or badly structured or contain irrelevant material
+	\item Has one major error and some minor errors
+	\item Demonstrates the capacity to
+	complete only moderately difficult tasks related to the subject material
+	\item No evidence of background reading
+	\item Displays the minimum acceptable standard of presentation (spelling, grammar, graphical)
+	\item Referencing inconsistent with major errors
+\end{itemize}
+
+\subsubsection*{Grade: E}
+
+\textit{Fail (marginal)}
+
+A factually sound answer with a partially successful, but not entirely acceptable, attempt to:
+
+\begin{itemize}
+	\item Integrate factual knowledge into a broader literature or theoretical, technical or professional framework develop arguments
+	\item Support ideas or arguments with evidence, citation or quotation
+	\item Engages with the subject matter or
+	problem set, despite major
+	deficiencies in structure, relevance or focus
+	\item Has two major error and some minor
+	errors
+	\item Demonstrates the capacity to
+	complete only part of, or the simpler
+	elements of, the task
+	\item An incomplete or rushed answer e.g.
+	the use of bullet points through part /
+	all of answer
+	\item Little or no referencing style evident
+\end{itemize}
+
+\subsubsection*{Grade: F}
+
+\textit{Fail (unacceptable)}
+
+An unacceptable level of intellectual engagement with
+the assessment task, with:
+
+\begin{itemize}
+	\item No appreciation of the relevant literature or theoretical, technical or professional framework
+	\item No developed or structured argument
+	\item No use of evidence, citation or quotation
+	\item No analysis or critical awareness displayed or is only partially successful
+	\item No demonstrated capacity for original and logical thinking
+	\item A failure to address the question resulting in a largely irrelevant answer or material of marginal relevance predominating
+	\item A display of some knowledge of material relative to the question posed, but with very serious omissions / errors and/or major inaccuracies included in answer
+	\item Solutions offered to a very limited portion of the problem set
+	\item An answer unacceptably incomplete (e.g. for lack of time)
+	\item A random and undisciplined development, layout or presentation
+	\item Unacceptable standards of presentation, such as grammar, spelling or graphical presentation
+	\item Evidence of substantial plagiarism
+	\item No referencing style evident
+\end{itemize}
+
+\subsubsection*{Grade: G}
+
+\textit{Fail (wholly unacceptable)}
+
+No intellectual engagement with the assessment task
+
+\begin{itemize}
+	\item Complete failure to address the question resulting in an entirely irrelevant answer
+	\item Little or no knowledge displayed relative to the question posed
+	\item Little or no solution offered for the problem set
+	\item Evidence of extensive plagiarism
+	\item No referencing style evident
+\end{itemize}
+
+\subsubsection*{Grade: NG}
+
+\textit{No grade (no work was submitted by the student or student was absent from the assessment, or work submitted did not merit a grade).}
+
+\subsection*{Extenuating circumstances}
+
+In the case that a student will not be able to meet an assessment deadline or will be absent from the course for an extended period of time, and this is known \textbf{IN ADVANCE}, they should consult the UCD policies on extenuating circumstances found here:
+\url{http://www.ucd.ie/registry/academicsecretariat/extc.htm}. It is important that in such cases you make the issue known to the lecturer as son as possible. The sooner that the lecturer is made aware of the situation, the more likely it is that you can be accommodated.
+
+\subsection*{Late assignment submissions}
+
+If a student submits an assignment late, the following penalties will be applied:
+
+\begin{itemize}
+	\item Coursework received at any time within two weeks of the due date will be graded, but a penalty will apply.
+	\begin{itemize}
+		\item Coursework submitted at any time up to one week after the due date will have the grade awarded reduced by two grade points (for example, from B- to C).
+		\item Coursework submitted more than one week but up to two weeks after the due date will have the grade reduced by four grade points (for example, from B- to D+).
+Where a student finds they have missed a deadline for submission, they should be advised that they may use the remainder of the week to improve their submission without additional penalty.
+	\end{itemize}
+	\item Coursework received more than two weeks after the due date will not be accepted.
+\end{itemize}
+
+\subsection*{Plagiarism}
+
+The university policy on plagiarism can be found here:
+
+\url{http://www.ucd.ie/registry/academicsecretariat/docs/plagiarism_po.pdf}
+
+Plagiarism is taken extremely seriously throughout the university and academia in general. The school has systems in place to detect plagiarism and these systems are fully implemented. You need to be very clear about what constitutes plagiarism and avoid it at all costs. The library has a good guide to help you avoid plagiarism that can be found here:
+
+\url{http://www.ucd.ie/library/supporting_you/support_learning/plagiarism/}
+
+Any student caught plagiarising will be subject to penalties in accordance with university policy.
+
+\section*{Course readings}
+
+\subsection*{Required Readings:}
+
+The following text shall be used extensively throughout the module, so it is essential that it is purchased:
+
+\begin{itemize}
+	\item Bueno de Mesquita, B. (2014). Principles of International Politics. 5th ed. Thousand Oaks: CQ Press
+\end{itemize}
+
+\subsection*{Further reading:}
+
+In addition to the readings required for each topic, a series of recommended readings are also included in the syllabus. These readings are useful for those who wish to explore a particular topic in more detail. They will also be very useful when approaching the essay assignment, for which you are required to demonstrate a more in-depth understanding of your chosen topic. 
+
+The following is a good general text on game theory and international politics.
+
+\begin{itemize}
+  \item Spaniel, W. (2011). Game theory 101: The complete textbook (Ebook available through Amazon)
+	\item Spaniel, W. (2012). Game Theory 101: The Rationality of War. (Ebook available through Amazon)
+	\item Osborne, M. J. (2004). An introduction to game theory (Vol. 3, No. 3). New York: Oxford University Press.
+\end{itemize}
+
+\section*{WEEKLY READING LIST}
+
+\subsection*{PART I: Foundations}
+
+\subsubsection*{Week 1: Introduction}
+
+Study question
+
+\begin{itemize}
+	\item What is the unitary state actor assumption? 
+	\item Can we aggregate individual preferences into a meaningful collective choice? 
+	\item If not, does it mean rational collective decision-making is impossible? 
+	\item What are three major approaches in International Relations? 
+	\item What the major areas of agreement/disagreements between the approaches? 
+	
+\end{itemize}
+
+\noindent Required Readings
+
+\begin{itemize}
+	\item BBdM Introduction \& Appendix
+	\item Barack Obama (2009). Cairo speech. Available here: \url{http://www.nytimes.com/2009/06/04/us/politics/04obama.text.html?pagewanted=all&_r=0}
+	\item Fearon, J. D. (1994). Domestic political audiences and the escalation of international disputes. American Political Science Review, 88(03), 577-592.
+	\item David Singer, J. (1961). The level-of-analysis problem in international relations. World Politics, 14(01), 77-92.
+\end{itemize}
+
+\noindent Further reading
+
+\begin{itemize}
+	\item Powell, R. (1993). Guns, butter, and anarchy. American Political Science Review, 87(01), 115-132.
+	\item Arrow, K. J. (1951). Social choice and individual values. Wiley, New York.
+	\item McKelvey, R. D. (1976). Intransitivities in multidimensional voting models and some implications for agenda control. Journal of Economic theory, 12(3), 472-482.
+	\item McKelvey, R. D. (1979). General conditions for global intransitivities in formal voting models. Econometrica: Journal of the Econometric Society, 1085-1112.
+	\item Schofield, N. (1978). Instability of simple dynamic games. The Review of Economic Studies, 575-594.
+	\item Shepsle, K. A. (1979). Institutional arrangements and equilibrium in multidimensional voting models. American Journal of Political Science, 27-59.
+	\item Niemi, R. \& Weisberg, H eds. (2001). Controversies in Voting Behavior, 4.
+	\item Kennedy, J. F. (1962). Speech Announcing the Quarantine Against Cuba. Available here: \url{https://www.mtholyoke.edu/acad/intrel/kencuba.htm}
+	\item Allison, G. T., \& Zelikow, P. (1999). Essence of decision: Explaining the Cuban missile crisis (Vol. 2). New York: Longman.
+	\item Bueno de Mesquita, B., \& Lalman, D. (1992). War and reason: Domestic and international imperatives (pp. 153-55). New Haven: Yale University Press.
+	\item Fey, M., \& Ramsay, K. W. (2007). Mutual optimism and war. American Journal of Political Science, 51(4), 738-754.
+	\item Keck, M. E., \& Sikkink, K. (1998). Activists beyond borders: Advocacy networks in international politics (Vol. 35). Ithaca, NY: Cornell University Press.
+	\item Checkel, J. T. (2001). Why comply? Social learning and European identity change. International organization, 55(03), 553-588.
+	\item Lalman, D., Oppenheimer, J.,\& Swistak, P. (1993). Formal rational choice theory: A cumulative science of politics. Political science: The state of the discipline II, 77-104.
+	\item Kahneman, Daniel (2011) Thinking, Fast and Slow. Macmillan. Ch 1 (Pp. 19-30), Ch 8-9 (Pp. 89-105)
+\end{itemize}
+
+\subsubsection*{Week 2: Theory building and theory testing}
+
+Study Questions
+
+\begin{enumerate}
+	\item What is a theory, how can they be distinguish from facts? 
+	\item How can we judge theories? 
+	\item How can we evaluate predictions of theories? 
+	\item How do we evaluate theories against each other? 
+\end{enumerate}
+
+\noindent Required Readings
+
+\begin{itemize}
+	\item BBdM Ch 1
+	\item Friedman, M. (1953). The methodology of positive economics. Essays in positive economics, 3(3).
+	\item Thompson, C. (2009). Can Game Theory Predict When Iran Will Get the Bomb. The New York Times Magazine. Available here: \url{http://www.nytimes.com/2009/08/16/magazine/16Bruce-t.html?pagewanted=all}
+\end{itemize}
+
+\noindent Further reading
+
+\begin{itemize}
+	\item Bueno de Mesquita, B. (2010). The Predictioneer's Game: Using the logic of brazen self-interest to see and shape the future. Random House LLC.
+	\item Krasner, S. D. (1978). Defending the national interest: Raw materials investments and US foreign policy. Princeton University Press.
+	\item Keohane, R. O. (2005). After hegemony: Cooperation and discord in the world political economy. Princeton University Press.
+	\item Morrow, J. D. (1994). Game theory for political scientists. Princeton, NJ: Princeton University Press.
+	\item Downs, G. W.,\& Rocke, D. M. (1990). Tacit bargaining, arms races, and arms control. Ann Arbor: University of Michigan Press.
+	\item Downs, G. W., Rocke, D. M., \& Barsoom, P. N. (1998). Managing the evolution of multilateralism. International Organization, 52(02), 397-419.
+	
+\end{itemize}
+
+\subsubsection*{Week 3: The strategic perspective}
+
+Study Questions
+
+\begin{enumerate}
+	\item Describe and explain the `chicken' game. Does it help us to understand the Israel-Palestine conflict?
+	\item Who are the main actors in selectorate theory and what do they want? 
+	\item What is the relationship between a selectorate and a winning coalition? Describe the selectorate and a winning coalition in 1) Ireland, 2) the USA, 3) Russia, 4) North Korea
+	\item What should an effective leader do to stay in power? 
+	\item What is the relationship between coalition size and regime type?
+	\item What is a public good? How is the provision of public goods related to the size of the winning coalition in a country?
+	\item What is the relationship between coalition size and public policy performance?
+	\item Why do autocracies hold elections? 
+	\item Why do leaders kill(purge) their loyal followers? 
+\end{enumerate}
+	
+\noindent Required Readings
+
+\begin{itemize}
+	\item BBdM Ch 2
+	\item Spaniel (2012). Game Theory 101: The Complete Textbook. Lesson 1.6.1
+	\item Bueno de Mesquita, B., Morrow, J. D., Siverson, R. M., \& Smith, A. (2004). Testing novel implications from the selectorate theory of war. World Politics, 56(03), 363-388.
+	\item Clarke, K. A.,\& Stone, R. W. (2008). Democracy and the logic of political survival. American Political Science Review, 102(03), 387-392.
+	\item Morrow, J. D., De Mesquita, B. B., Siverson, R. M.,\& Smith, A. (2008). Retesting selectorate theory: separating the effects of W from other elements of democracy. American Political Science Review, 102(03), 393-400.
+\end{itemize}
+
+\noindent Further reading
+
+\begin{itemize}
+	\item Bueno de Mesquita, B., Smith, A., Siverson, R., \& Morrow, J. (2003). The logic of political survival.
+	\item Kennedy, R. (2009). Survival and Accountability: An Analysis of the Empirical Support for “Selectorate Theory”. International Studies Quarterly, 53(3), 695-714.
+	\item Bueno de Mesquita, B.,\& Smith, A. (2010). Leader survival, revolutions, and the nature of government finance. American Journal of Political Science, 54(4), 936-950.
+\end{itemize}
+
+\subsubsection*{Week 4: Tools for Analysing International Affairs: Spatial Models of Politics}
+
+Study Questions
+
+\begin{enumerate}
+	\item What does the term `single-peaked preference' mean? 
+	\item Why is the median position so important in the median voter theorem? 
+	\item What do the shape and the size of a win set tell us about the final outcome? 
+	\item What happens when the expected utility of two policy options are exactly the same; how should the policy maker choose?
+\end{enumerate}
+
+\noindent Required Reading
+
+\begin{itemize}
+	\item BBdM Ch 3
+	\item Gandhi, J.,\& Przeworski, A. (2007). Authoritarian institutions and the survival of autocrats. Comparative Political Studies.
+	\item Park, J. S. (2005). Inside multilateralism: The six-party talks. Washington Quarterly. 28(4). 73-91.
+\end{itemize}
+
+\noindent Further reading
+
+\begin{itemize}
+	\item Austen-Smith, D.,\& Banks, J. S. (2000). Positive political theory I: collective preference (Vol. 1). University of Michigan Press.
+	\item Moulin, H. (1991). Axioms of cooperative decision making (No. 15). Cambridge University Press.
+	\item Tsebelis, G. (2002). Veto players: How political institutions work. Princeton University Press.
+\end{itemize}
+
+\subsubsection*{Week 5: Introduction to game theory} 
+
+Study Questions
+
+\begin{enumerate}
+	\item What is game theory?
+	\item What are the components of game theory?
+	\item Why do we study non-cooperative games?
+	\item What is the distinction between normal formal and extensive form games?
+	\item Why do we study imperfect information games?
+\end{enumerate}
+
+\noindent Required Reading
+
+\begin{itemize}
+	\item BBdM Ch 4
+	\item Spaniel, W. (2012). Game Theory 101: The Rationality of War. Ch 1.
+	\item Spaniel (2012). Game Theory 101: The Complete Textbook. Lesson 1.6.2 and Lesson 2.1-2.2
+	\item Van Evera, S. (1998). Offense, defense, and the causes of war. International Security, 22(4), 5-43.
+\end{itemize}
+
+\noindent Further reading
+
+\begin{itemize}
+	\item 
+\end{itemize}
+
+\subsection*{PART II: War}
+
+\subsubsection*{Week 6: Why war? The big picture}
+
+Study Questions
+
+\begin{enumerate}
+	\item What are the evidence against the claim that war is an irrational phenomena?
+	\item Why, according to the rationalist view, is war puzzling?
+	\item How does Neorealism and Power transition judge the effects the power parity on the likelihood of war?
+	\item If Power Transition has greater empirical support, what does it imply about the rise of china and the response of the United States to it?
+\end{enumerate}
+
+\noindent Required Reading
+
+\begin{itemize}
+	\item BBdM Ch 5
+	\item Fearon, J. D. (1995). Rationalist explanations for war. International Organization, 49(03), 379-414.
+	\item Spaniel, W. (2012). Game Theory 101: The Rationality of War. Ch 2.
+	\item Lake, D. (2011). “Two Cheers for Bargaining Theory: Assessing Rationalist Explanations of the Iraq War?” International Security 35(3): 7-52.
+\end{itemize}
+
+\noindent Further reading
+
+\begin{itemize}
+	\item Huntington, S. P. (1996). The clash of civilizations and the remaking of world order. Penguin Books India.
+	\item Achen, C. H. \& Snidal, D. (1989). Rational deterrence theory and comparative case studies. World Politics, 41(02), 143-169.
+	\item Downs, G. W. (1989). The rational deterrence debate. World Politics, 41(02), 225-237.
+	\item Huth, P. \& Russett, B. (1993). General Deterrence between Enduring Rivals: Testing Three Competing Models. American Political Science Review, 87(01), 61-73.
+	\item Gartzke, E. (1999). War is in the Error Term. International Organization, 53(03), 567-587.
+	\item Slantchev, B. L. (2003). The power to hurt: Costly conflict with completely informed states. American Political Science Review, 97(01), 123-133.
+	\item Slantchev, B. L. (2003b). The principle of convergence in wartime negotiations. American Political Science Review, 97(04), 621-632.
+	\item Powell, R. (1999). In the shadow of power: States and strategies in international politics. Princeton University Press.
+	\item Deutsch, K. W.,\& Singer, J. D. (1964). Multipolar power systems and international stability. World Politics, 16(03), 390-406.
+	\item Organski, A. F. (1981). The war ledger. University of Chicago Press.
+	\item Kugler, J.,\& Lemke, D. (Eds.). (1996). Parity and war: Evaluations and extensions of the war ledger. University of Michigan Press.
+	\item Lemke, D.,\& Reed, W. (1996). Regime types and status quo evaluations: Power transition theory and the democratic peace. International Interactions, 22(2), 143-164.
+	\item Lemke, D.,\& Werner, S. (1996). Power parity, commitment to change, and war. International Studies Quarterly, 235-260.
+\end{itemize}
+
+
+\subsubsection*{Week 7: Domestic theories of war and civil war}
+
+Study Question
+
+\begin{enumerate}
+	\item How do audience costs affect the behaviour of leaders?
+	\item What does it mean to assert that democracies try harder in wars?
+	\item What are selection effects and how do they relate to the targets democracies pick upon?
+	\item How does the selectorate account of policy making explain the democratic peace?
+	\item What does the selectorate account imply about the pacifism of democracy?
+\end{enumerate}
+
+\noindent Required Readings
+
+\begin{itemize}
+	\item BBdM Ch 6
+	\item Spaniel, W. (2012). Game Theory 101: The Rationality of War. Ch 3.
+	\item Collier, P., \& Hoeffler, A. (2002). On the incidence of civil war in Africa. Journal of conflict resolution, 46(1), 13-28.
+	\item Lake, D. A., \& Rothchild, D. (1996). Containing fear: The origins and management of ethnic conflict. International security, 21(2), 41-75.
+\end{itemize}
+
+\noindent Further reading
+
+\begin{itemize}
+	\item Bueno de Mesquita, B. \& Lalman, D. (1992). War and reason: Domestic and international imperatives (pp. 153-55). New Haven: Yale University Press.  Part II.
+	\item Maoz, Z., \& Russett, B. (1993). Normative and structural causes of democratic peace, 1946-1986. American Political Science Review, 624-638.
+	\item Chan, S. (1997). In search of democratic peace: Problems and promise. Mershon International Studies Review, 41(1), 59-91. 
+	\item Fearon, J. D. (1994). Domestic political audiences and the escalation of international disputes. American Political Science Review, 88(03), 577-592.
+	\item Schultz, K. A. (1999). Do democratic institutions constrain or inform? Contrasting two institutional perspectives on democracy and war. International Organization, 53(02), 233-266. 
+	\item Bueno de Mesquita, B., Morrow, J. D., Siverson, R. M., \& Smith, A. (1999). An institutional explanation of the democratic peace. American Political Science Review, 791-807.
+	\item Slantchev, B. L. (2006). Politicians, the media, and domestic audience costs. International Studies Quarterly, 50(2), 445-477.
+	\item Bueno de Mesquita, B.,\& Smith, A. (2012). Domestic explanations of international relations. Annual Review of Political Science, 15, 161-181.
+	\item Ashworth, S.,\& Ramsay, K. W. (2011). Should Audiences Cost? Optimal Domestic Constraints in International Crises.
+\end{itemize}
+
+
+
+%\subsubsection*{Week 8: Reading and writing week}
+
+%	The first draft of your final project is due before 4pm on 29th of October. You should at this stage have identified the real-world strategic situation you will model, the issues and actors involved, actor's relative power, and any other relevant aspects of the events you are studying. You should use this information to construct policy spaces for the issue(s) you have identified and to place relevant actors on these policy dimensions. The first draft should be substantial enough for your peers to be able to provide feedback and constructive critique following the peer review workshop in week 9.
+
+\subsubsection*{Week 8: Peer-review workshop}
+
+Exercise
+
+\begin{enumerate}
+	\item Write a 2-page review of the article distributed in class. Utilise the guidelines provided to do so. These reviews will be read out in class and used as the basis for the seminar.
+\end{enumerate}
+
+\noindent Required Readings
+
+\begin{itemize}
+	\item Guidelines for workshop
+	\item Example texts to be peer reviewed in class
+\end{itemize}
+
+\subsubsection*{Week 9: Easter Monday}
+
+\subsubsection*{Week 10: How international organisations work or don't work}
+
+Study Question
+
+\begin{itemize}
+	\item What are the functions of International Organizations (IOs) from the rationalist point of view?
+	\item What are the functions of IOs from the constructivist point of view?
+	\item How do IOs promote interstate cooperation?
+	\item How can one explain the apparent shallowness of many multilateral agreements created under the auspices of IOs?
+\end{itemize}
+
+\noindent Key reading
+
+\begin{itemize}
+	\item BBdM Ch 7
+	\item Olson, M. (1965). The logic of collective action: public goods and the theory of groups. Harvard University Press.
+	\item Koremenos, B., Lipson, C., \& Snidal, D. (2001). The rational design of international institutions. International organization, 55(04), 761-799.
+	\item Garrett, Geoffrey (1992). International Cooperation and Institutional Choice: the European Community’s Internal Market. International Organization 46(2): 533–560.
+	\item Posen, B. R. (2006). Nuclear-armed Iran: A Difficult But Not Impossible Policy Problem. Century Foundation.
+	\item Joffe, J. (2011). Less Than Zero. Foreign Affairs. 90(1) Jan/Feb. Available here: \url{http://www.foreignaffairs.com/articles/67034/josef-joffe-and-james-w-davis/less-than-zero}
+\end{itemize}
+
+\noindent Further reading
+
+\begin{itemize}
+	\item Fearon, J. D. (1998). Bargaining, enforcement, and international cooperation. International Organization, 52(02), 269-305.
+	
+	\item Martin, L. L. (1993). Credibility, costs, and institutions: Cooperation on economic sanctions. World Politics, 45(03), 406-432.
+	\item Morrow, J. D. (1994). Modeling the forms of international cooperation: distribution versus information. International Organization, 48(03), 387-423.
+	\item Irwin, D. A. (1995). The GATT in historical perspective. The American economic review, 323-328.
+	\item Smith, A. (1995). Alliance formation and war. International Studies Quarterly, 405-425. 
+	\item Downs, G. W., Rocke, D. M.,\& Barsoom, P. N. (1996). Is the good news about compliance good news about cooperation?. International Organization, 50(03), 379-406.
+	\item Powell, R. (1991). Absolute and relative gains in international relations theory. The American Political Science Review, 1303-1320.
+	\item Voeten, E. (2005). The political origins of the UN Security Council's ability to legitimize the use of force. International Organization, 59(03), 527-557.
+	\item Rose, A. K. (2004). Do We Really Know That the WTO Increases Trade?. American Economic Review, 94(1), 98-114.
+	\item Tomz, M., Goldstein, J. L.,\& Rivers, D. (2007). Do we really know that the WTO increases trade? Comment. The American Economic Review, 2005-2018.
+	\item Rose, A. K. (2007). Do we really know that the WTO increases trade? Reply. The American Economic Review, 2019-2025.
+	\item Simmons, B. A. (2000). The legalization of international monetary affairs. International Organization, 54(03), 573-602.
+\end{itemize}
+	
+\subsubsection*{Week 11: Global warming: Designing a solution}
+
+Study Questions
+
+\begin{enumerate}
+	\item Why are countries not responding effectively to global warming?
+	\item What are the real costs of measures to address global warming?
+	\item If global agreements such as the Kyoto Protocol 1997 and Copenhagen Summit 2009 are not working, what according to BBdM accounts for the apparent reduction in carbon emissions?
+	\item If the lack of effective response is rational, what can be done to address global warming (while remaining within the rationalist framework)?
+\end{enumerate}
+
+\noindent Required Readings
+
+\begin{itemize}
+	\item BBdM Ch 8
+	\item Browne, J. (2004). “Beyond Kyoto.” Foreign Affairs 83(4): 20-32.
+	\item Ostrom, E. (1990). Governing the commons: The evolution of institutions for collective action. Cambridge university press. Ch 1.
+	\item Sebenius, J. K. (1992). Challenging conventional explanations of international cooperation: negotiation analysis and the case of epistemic communities. International organization, 46(01), 323-365.
+\end{itemize}
+
+\noindent Further reading
+
+\begin{itemize}
+	\item Hardin, G. (1968). The tragedy of the commons. Science, 162(3859), 1243-1248.
+	\item Ostrom, E. (2008). Tragedy of the Commons. The New Palgrave Dictionary of Economics, 3573-3576.
+	\item Biermann, F. \& Pattberg, P. (2008). Global Environmental Governance: Taking Stock, Moving Forward. Annual Review of Environment and Resources. 33(1): 277--294.
+	\item Bales, C. F. \& Duke, R. D. (2008). Containing Climate Change: An Opportunity for U.S. Leadership. Foreign Affairs. Available here: \url{http://www.foreignaffairs.com/articles/63570/carter-f-bales-and-richard-d-duke/containing-climate-change}
+	\item Sandler, T. (2004). Global collective action. Cambridge: Cambridge University Press. Ch10-11.
+	\item Lange, A.,\& Vogt, C. (2003). Cooperation in international environmental negotiations due to a preference for equity. Journal of Public Economics, 87(9), 2049-2067.
+	\item Finus, M. (2007). Game Theoretic Research on the Design of International Environmental Agreements: Insights, Critical Remarks and Future Challenges.
+\end{itemize}
+
+ 
+%\subsection*{PART III: PEACE}
+
+\subsubsection*{Week 12: Human Rights, International Law, Norms}
+
+Study Questions
+
+\begin{enumerate}
+	\item Distinguish between International Law, international Regimes and international norms?
+	\item Are economic/social rights a necessary precursor to political rights?
+	\item Why are such arguments (economic versus political rights) popular with dictators?
+	\item Which specific combination of political rights does the strategic perspective seem to argue for?
+\end{enumerate}
+
+\noindent Required Readings
+
+\begin{itemize}
+	\item BBdM Ch 9
+	\item Simmons, B. A.,\& Danner, A. (2010). Credible commitments and the international criminal court. International Organization, 64(02), 225-256.
+	\item Finnemore, M.,\& Sikkink, K. (1998). International norm dynamics and political change. International Organization, 52(04), 887-917.
+\end{itemize}
+
+\noindent Further reading
+
+\begin{itemize}
+	\item  Simmons, B. A. (2009). Mobilizing for human rights: international law in domestic politics. Cambridge University Press. Ch 2.
+	\item Ostrom, E. (2000). Collective action and the evolution of social norms. The Journal of Economic Perspectives, 137-158.
+	\item Binmore, K. G. (1998). Game theory and the social contract: just playing (Vol. 2). MIT Press.
+	\item Goldstein, J.,\& Keohane, R. O. (Eds.). (1993). Ideas and foreign policy: beliefs, institutions, and political change. Cornell University Press.
+	\item Goldsmith, J. L.,\& Posner, E. A. (2005). The limits of international law (Vol. 199). New York: Oxford University Press.
+\end{itemize}
+
+%\subsubsection*{Week 12: Free Trade or Fair: The Domestic Politics of Tariffs}  
+
+%Study Questions
+
+%\begin{enumerate}
+%	\item How can we distinguish between comparative advantage and absolute advantage?
+%	\item Is free trade always better than protectionism?
+%	\item Are we producers or consumers? Should this define where our interests should lie in the debate?
+%	\item If free trade is always better, what explains the persistence of protectionism?
+%	\item Are democracies more open to free trade?
+%\end{enumerate}
+
+%\noindent Required Readings
+
+%\begin{itemize}
+%	\item BBdM Ch 10
+%	\item GQF Ch 10
+%	\item Ghemawat, P. (2007). Why the World Isn’t Flat. Foreign Policy. Available here: \url{http://www.foreignpolicy.com/articles/2007/02/14/why_the_world_isnt_flat}
+%	\item Mickelthwait, J. and Wooldridge, A. (2001). The Globalization Backlash. Foreign Policy. Available here: \url{http://www.foreignpolicy.com/articles/2001/09/01/think_again_the_globalization_backlash}
+%\end{itemize}
+
+%\noindent Further reading
+
+%\begin{itemize}
+%	\item Alt, J. E.,\& Gilligan, M. (1994). The political economy of trading states: Factor specificity, collective action problems and domestic political institutions. Journal of Political Philosophy, 2(2), 165-192.
+%	\item Gilligan, M. J. (1997). Empowering Exporters: Reciprocity, delegation, and collective action in American trade policy. University of Michigan Press.
+%	\item O'Halloran, S. (1994). Politics, process, and American trade policy. University of Michigan Press.
+%	\item Bernhard, W.,\& Leblang, D. (1999). Democratic institutions and exchange-rate commitments. International Organization, 53(01), 71-97.
+%	\item Clark, W. R.,\& Hallerberg, M. (2000). Mobile capital, domestic institutions, and electorally induced monetary and fiscal policy. American Political Science Review, 323-346.
+%	\item Rogowski, R. (1989). Commerce and coalitions: How trade affects domestic political alignments. Princeton, NJ.
+%	\item Midford, P. (1993). International trade and domestic politics: improving on Rogowski's model of political alignments. International Organization, 47(04), 535-564.
+%	\item Grossman, G. M.,\& Helpman, E. (1993). The politics of free trade agreements (No. w4597). National Bureau of Economic Research.
+%	\item Conybeare, J. A. (1984). Public goods, prisoners' dilemmas and the international political economy. International Studies Quarterly, 5-22.
+%	\item Goldstein, J.,\& Martin, L. L. (2000). Legalization, trade liberalization, and domestic politics: a cautionary note. International Organization, 54(03), 603-632.
+%\end{itemize}
+
+%\subsubsection*{Week : Globalization: International Winners and Losers}  
+
+%Study Questions
+
+%\begin{enumerate}
+%	\item What is globalization?
+%	\item What are the effects of globalization (in three domains, trade, capital, and finance?)
+%	\item What are the functions of money?
+%	\item Why are students, especially college students in the West, in favor of fair trade (use factor mobility and comparative advantage to explain)?
+%	\item How does factor mobility affect the propensity of labor/capital to support or oppose free trade?
+%	\item Who then, are the winners and losers of globalization?
+%\end{enumerate}
+
+%\noindent Required Readings
+
+%\begin{itemize}
+%	\item BBdM Ch 11
+%	\item GQF Ch 11
+%\end{itemize}
+
+%\noindent Further reading
+
+%\begin{itemize}
+%	\item 
+%\end{itemize}
+
+%\subsubsection*{Week : Foreign Aid, Poverty, and Revolution}  
+
+%Study Questions
+
+%\begin{enumerate}
+%	\item What are the two conventional (too little aid, poor management) views on foreign aid?
+%	\item Why does the selectorate theory argues that the conventional views are wrong?
+%	\item If foreign aid is not done for altruistic reasons, what is the motivation behind aid? For donors? For recipients?
+%	\item Why does not the selectorate account argues that aid is not only not helpful but actively detrimental to the needy?
+%	\item If selectorate account is right and the effects the aid is represents an equilibrium outcome, what can be done?
+%\end{enumerate}
+
+%\noindent Required Readings
+
+%\begin{itemize}
+%	\item BBdM Ch 12
+%	\item GQF Ch 12
+%	\item Dunning, T. (2004). Conditioning the effects of aid: Cold War politics, donor credibility, and democracy in Africa. International Organization, 58(02), 409-423.
+%\end{itemize}
+
+%\noindent Further reading
+
+%\begin{itemize}
+%	\item Baldwin, D. A. (1999). The Sanctions Debate and the Logic of Choice. International Security, 80-107.
+%	\item Lektzian, D. J.,\& Sprecher, C. M. (2007). Sanctions, signals, and militarized conflict. American Journal of Political Science, 51(2), 415-431.
+%\end{itemize}
+
+%\subsubsection*{Week : Can Terrorism Be Rational?}  
+
+%Study Questions
+
+%\begin{enumerate}
+%	\item Can terrorism be rational?
+%	\item Is terrorism rational? (note this is a different question)
+%	\item What are the implications if terrorism is not rational?
+%	\item What are real world examples of terrorism that fits the stylized games that are presented?
+%	\item Example – Hamas vs Fatah vs Israel; Sri Lanka vs Tamil Factions vs the Karuna Faction (breakaway Tamil Tigers).
+%	\item Why does holding talks with terrorists increase the amount of expected violence?
+%\end{enumerate}
+
+%\noindent Required Readings
+
+%\begin{itemize}
+%	\item BBdM Ch 13
+%	\item GQF Ch 13
+%	\item Bueno de Mesquita, E. (2005). Conciliation, counterterrorism, and patterns of terrorist violence. International Organization, 59(01), 145-176.
+%	\item Pape, R. A. (2003). The strategic logic of suicide terrorism. American political science review, 97(03), 343-361.
+%\end{itemize}
+
+%\noindent Further reading
+
+%\begin{itemize}
+%	\item Fearon, J. D.,\& Laitin, D. D. (2003). Ethnicity, insurgency, and civil war. American political science review, 97(01), 75-90.
+%	\item Sandler, T. (2003). Collective action and transnational terrorism. The World Economy, 26(6), 779-802.
+%	\item Benson, M.,\& Kugler, J. (1998). Power parity, democracy, and the severity of internal violence. Journal of Conflict Resolution, 42(2), 196-209.
+%	\item Crenshaw, M. (2000). Terrorism and International Violence. Handbook of War Studies II, edited by Manus Midlarsky, 3-24.
+%	\item Young, J. K.,\& Dugan, L. (2011). Veto players and terror. Journal of Peace Research, 48(1), 19-33.
+%\end{itemize}
+
+%\subsubsection*{Week : A Democratic World Order: Peace without Democratisation}  
+
+%Study Questions
+
+%\begin{enumerate}
+%	\item What is the empirical record on the democracy promotion efforts of democracies?
+%	\item Why do democracies favour pliant autocratic leaders?
+%	\item What do autocracies also favour pliant autocratic leaders?
+%	\item What can be done if this is an equilibrium outcome?
+%	\item Can multilateral organisations be more effective where bilateral efforts have failed?
+%\end{enumerate}
+
+%\noindent Required Readings
+
+%\begin{itemize}
+%	\item BBdM Ch 14
+%	\item GQF Ch 14
+%\end{itemize}
+
+%\noindent Further reading
+
+%\begin{itemize}
+%	\item Lemke, D.,\& Reed, W. (1996). Regime types and status quo evaluations: Power transition theory and the democratic peace. International Interactions, 22(2), 143-164.
+%	\item Kinsella, D. (2005). No rest for the democratic peace. American Political Science Review, 99(03), 453-457.
+%\end{itemize}
+
+\bibliographystyle{plain}
+%\nobibliography{BibLib}
+
+\end{document}
