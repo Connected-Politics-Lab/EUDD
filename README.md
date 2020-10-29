@@ -1,5 +1,4 @@
 <img align="left" src="Images/logo_EU.png" width="70">
-
 # EUDD - The European Union Data and Democracy Project
 
 This repository documents the outputs of the Jean Monnet Chair European Union Data and Democracy Project led by [Dr. James P. Cross](https://people.ucd.ie/james.cross). The project is hosted in the [Connected_Politics Lab](https://www.ucd.ie/connected_politics/) at University College Dublin
