@@ -1,4 +1,4 @@
-<img align="right" src="Images/logo_EU.png" width="200">
+<img align="left" src="Images/logo_EU.png" width="150">
 
 # EUDD - The European Union Data and Democracy Project
 
