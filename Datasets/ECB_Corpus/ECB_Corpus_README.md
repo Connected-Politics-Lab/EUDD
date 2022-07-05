@@ -2,9 +2,9 @@
 	<img src="Images/logo_EU.png" width="100">
 </p>
 
-# European Parliament Corpus 1999-2014
+# Governing Council of the European Central Bank Corpus 1999-2018
 
-The EP corpus covers all English language legislative speeches in the European Parliament plenary from the period 1999-2014. It is published here as part of the outputs of the Jean Monnet Chair European Union Data and Democracy Project led by [Dr. James P. Cross](https://people.ucd.ie/james.cross). The project is hosted in the [Connected_Politics Lab](https://www.ucd.ie/connected_politics/) at University College Dublin and was completed in collaboration with [Dr. Derek Greene](https://people.ucd.ie/derek.greene).
+This corpus covers all English language speeches made by members of the Governing Council of the European Central Bank from the period 1999-2014. It is published here as part of the outputs of the Jean Monnet Chair European Union Data and Democracy Project led by [Dr. James P. Cross](https://people.ucd.ie/james.cross). The project is hosted in the [Connected_Politics Lab](https://www.ucd.ie/connected_politics/) at University College Dublin and was completed in collaboration with [Dr. Derek Greene](https://people.ucd.ie/derek.greene).
 
 If you make use of this corpus, please consider citing the associated paper:
 
