@@ -2,7 +2,9 @@
 	<img src="Images/logo_EU.png" width="100">
 </p>
 
-# EUDD - The European Union Data and Democracy Project
+# European Parliament Elections 2019 in Ireland - Candidate Survey
+
+This project documents the results of a candidate survey fielded in advance of the 2019 European Parliament elections in Ireland. The codebook found in this repository documents the questions asked as part of the survey. The response data is available upon request by emailing the project lead at [james.cross@ucd.ie](james.cross@ucd.ie).
 
 This repository documents the outputs of the Jean Monnet Chair European Union Data and Democracy Project led by [Dr. James P. Cross](https://people.ucd.ie/james.cross). The project is hosted in the [Connected_Politics Lab](https://www.ucd.ie/connected_politics/) at University College Dublin
 
