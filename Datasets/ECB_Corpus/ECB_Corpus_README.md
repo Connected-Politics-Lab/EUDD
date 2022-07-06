@@ -4,13 +4,13 @@
 
 # Governing Council of the European Central Bank Corpus 1999-2018
 
-This corpus covers all English language speeches made by members of the Governing Council of the European Central Bank from the period 1999-2014. It is published here as part of the outputs of the Jean Monnet Chair European Union Data and Democracy Project led by [Dr. James P. Cross](https://people.ucd.ie/james.cross). The project is hosted in the [Connected_Politics Lab](https://www.ucd.ie/connected_politics/) at University College Dublin and was completed in collaboration with [Dr. Derek Greene](https://people.ucd.ie/derek.greene).
+This corpus covers all English language speeches made by members of the Governing Council of the European Central Bank from the period 1999-2016 that could be found on the websites of the European Central Bank and the Euro area central banks. It is published here as part of the outputs of the Jean Monnet Chair European Union Data and Democracy Project led by [Dr. James P. Cross](https://people.ucd.ie/james.cross). The project is hosted in the [Connected_Politics Lab](https://www.ucd.ie/connected_politics/) at University College Dublin and was completed in collaboration with [Dr. Derek Greene](https://people.ucd.ie/derek.greene).
 
 If you make use of this corpus, please consider citing the associated paper:
 
-- Greene, Derek, and James P. Cross. "Exploring the Political Agenda of the European Parliament Using a Dynamic Topic Modeling Approach." Political Analysis 25.1 (2017): 77-94. [PDF](http://derekgreene.com/papers/greene17europarl.pdf) [BibTeX](http://derekgreene.com/bib/greene17europarl.bib) [Preprint](https://arxiv.org/abs/1607.03055)
+- Cross, J.P. and Greene, D., 2020. Talk is not cheap: Policy agendas, information processing, and the unusually proportional nature of European Central Bank communications policy responses. Governance, 33(2), pp.425-444. [BibTeX](https://scholar.googleusercontent.com/scholar.bib?q=info:_5S9JPViYNkJ:scholar.google.com/&output=citation&scisdr=CgXPbY_HEPSCsEZ2X8c:AAGBfm0AAAAAYsVwR8eIZ0CY6tqKStSSpPmpMMw-4gpT&scisig=AAGBfm0AAAAAYsVwR4TKXKFcqj_dTuTHdGJO7DFCVMEb&scisf=4&ct=citation&cd=-1&hl=en) [Preprint](https://researchrepository.ucd.ie/bitstream/10197/11032/1/insight_publication.pdf)
 
-The published version of this study can be found [here](https://www.cambridge.org/core/journals/political-analysis/article/abs/exploring-the-political-agenda-of-the-european-parliament-using-a-dynamic-topic-modeling-approach/BBC7751778E4542C7C6C69E6BF954E4B#article)
+The published version of this study can be found [here](https://onlinelibrary.wiley.com/doi/abs/10.1111/gove.12441)
 
 
 
